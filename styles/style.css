@@ -1,0 +1,9 @@
+input[type=radio] {
+    display: none;
+}
+
+input[type=radio]:checked + img{
+    border: 5px solid pink;
+    border-radius: 50%;
+    background-color: hotpink;
+} 
