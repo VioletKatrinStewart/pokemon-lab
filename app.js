@@ -38,4 +38,7 @@ generatePokemon();
 
 button.addEventListener('click', ()=>{
     generatePokemon();
+    const userChoice = document.querySelector('input[type=radio]:checked');
+    console.log(userChoice, pokemon);
 });
+
