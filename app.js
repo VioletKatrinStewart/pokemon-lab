@@ -51,7 +51,7 @@ button.addEventListener('click', ()=>{
     const chosenRadio = document.querySelector('input[type=radio]:checked');
     generatePokemon();
     if (chosenRadio){
-        const chosenID = chosenRadio.value;
+        const chosenID = Number(chosenRadio.value);
         totalPlays++;
         pickPokemon(chosenID);
         if (totalPlays >= 10){
