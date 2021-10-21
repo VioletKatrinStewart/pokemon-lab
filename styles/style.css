@@ -3,7 +3,10 @@ input[type=radio] {
 }
 
 input[type=radio]:checked + img{
-    border: 5px solid pink;
+    background-image: url(../assets/download.png);
+    background-size: 125%;
+    background-position: center;
     border-radius: 50%;
-    background-color: hotpink;
+    padding: 50px;
+    
 } 
