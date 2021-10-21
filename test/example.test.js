@@ -2,6 +2,8 @@
 // import { example } from '../example.js';
 //import { getPokedex } from "../storage-utils.js";
 
+import { getPokedex, shownPokemon } from '../storage-utils';
+
 const test = QUnit.test;
 
 test('time to test a function', (expect) => {
@@ -18,9 +20,33 @@ test('time to test a function', (expect) => {
     expect.equal(actual, expected);
 });
 
-// test('getPokedex should return the list of captured pokemon if it exists', (expect)=>{
-//     const fakePoke = [
-//         { pokemon:}
-//     ]
-// }
-// }
+test ('getPokedex returns the key RESULTS from localStorage', (expect) => {
+
+    const results = [ 
+        //put static info here ID SHOWN PICKED
+
+    ];
+
+    localStorage.setItem('POKEDEX', JSON.stringify(results));
+    const actual = getPokedex();
+
+    expect.deepEqual(actual, results);
+});
+
+test('shownPokemon increments the shown key when the item exists in results', (expect)=>{
+    const results = [
+    //{ static data here}
+    ];
+    localStorage.setItem('RESULTS', JSON.stringify(results));
+    const expected = [
+        //ID SHOWN PICKED
+    ];
+    shownPokemon('bulbasaur'); //fill that in to match static
+    const actual = getPokedex();
+
+    expect.deepEqual(actual, expected);
+});
+
+test('shownPokemon adds a new item if its not in results', (expect)=>{
+ //WRITE TEST FOR THIS
+});
