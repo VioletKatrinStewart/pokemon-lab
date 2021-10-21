@@ -23,17 +23,48 @@ test('time to test a function', (expect) => {
 test ('getPokedex returns the key RESULTS from localStorage', (expect) => {
 
     const results = [ 
-        //put static info here ID SHOWN PICKED
-
+        { id: 'bulbasaur', shown: 2, picked: 2 },
+        { id: 'pikachu', shown: 2, picked: 1 },
+        { id: 'caterpie', shown: 2, picked: 1 },
     ];
 
-    localStorage.setItem('POKEDEX', JSON.stringify(results));
+    localStorage.setItem('RESULTS', JSON.stringify(results));
+
     const actual = getPokedex();
 
     expect.deepEqual(actual, results);
 });
 
-test('shownPokemon increments the shown key when the item exists in results', (expect)=>{
+test ('getPokedex returns an empty array if there is no RESULTS key in localStorage', (expect)=>{
+
+    localStorage.removeItem('RESULTS');
+    const actual = getPokedex();
+
+    expect.deepEqual(actual, []);
+});
+
+test('shownPokemon increments the shown key when the item exists in results', 
+    (expect)=>{
+        const results = [ 
+            { id: 'bulbasaur', shown: 2, picked: 2 },
+        ];
+
+        localStorage.setItem('RESULTS', JSON.stringify(results));
+        const expected = [ 
+            { id: 'bulbasaur', shown: 3, picked: 2 },
+        ];
+
+        shownPokemon('bulbasaur'); //fill that in to match static
+        const actual = localStorage.getItem('RESULTS');
+
+        expect.deepEqual(actual, expected);
+    });
+
+test('shownPokemon adds a new item if its not in results', (expect)=>{
+ //WRITE TEST FOR THIS
+});
+
+test('pickPokemon increments the picked key when the item exists in results', (expect)=>{
     const results = [
     //{ static data here}
     ];
@@ -41,12 +72,10 @@ test('shownPokemon increments the shown key when the item exists in results', (e
     const expected = [
         //ID SHOWN PICKED
     ];
-    shownPokemon('bulbasaur'); //fill that in to match static
+    pickPokemon('bulbasaur'); 
     const actual = getPokedex();
 
     expect.deepEqual(actual, expected);
 });
 
-test('shownPokemon adds a new item if its not in results', (expect)=>{
- //WRITE TEST FOR THIS
-});
+//PARSE????? LOOK AT JULIES COMMITS
