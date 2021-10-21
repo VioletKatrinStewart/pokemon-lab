@@ -38,19 +38,3 @@ export function pickPokemon(id){
 
 
 
-// export function addPoke(pokemon){
-//     const results = getPokedex();
-//     let newPoke;
-//     const reselectPoke = findById(pokemon, results);
-//     if (reselectPoke){
-//         reselectPoke.encountered++;
-//     } else {
-//         newPoke = { pokemon: pokemon, encountered: 1 };
-//         results.push(newPoke);
-//     }
-//     const stringPoke = JSON.stringify(results);
-//     localStorage.setItem('POKEDEX', stringPoke);
-//     if (newPoke) {
-//         return newPoke.encountered;
-//     } else { return reselectPoke.encountered; }
-// }

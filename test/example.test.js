@@ -2,7 +2,7 @@
 // import { example } from '../example.js';
 //import { getPokedex } from "../storage-utils.js";
 
-import { getPokedex, shownPokemon, pickPokemon } from '../storage-utils';
+import { getPokedex, shownPokemon, pickPokemon } from '../storage-utils.js';
 
 const test = QUnit.test;
 
