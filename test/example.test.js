@@ -66,7 +66,7 @@ test('shownPokemon adds a new item if its not in results', (expect)=>{
     const expected = [
         { id: 'bulbasaur', shown: 1, picked: 0 },
     ];
-    shownPokemon('bubasaur');
+    shownPokemon('bulbasaur');
     const actual = getPokedex();
 
     expect.deepEqual(actual, expected);

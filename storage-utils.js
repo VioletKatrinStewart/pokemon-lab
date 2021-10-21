@@ -22,7 +22,7 @@ export function shownPokemon(id){
         const newItem = { id: id, shown: 1, picked: 0 };
         results.push(newItem);
     }
-    localStorage.setItem('RESULTS', results);
+    localStorage.setItem('RESULTS', JSON.stringify(results));
 }
 
 export function pickPokemon(id){
@@ -31,7 +31,7 @@ export function pickPokemon(id){
 
     item.picked++;
 
-    localStorage.setItem(JSON.stringify(results));
+    localStorage.setItem('RESULTS', JSON.stringify(results));
 }
 
 
