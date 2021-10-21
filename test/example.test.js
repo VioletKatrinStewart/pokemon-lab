@@ -67,7 +67,7 @@ test('shownPokemon adds a new item if its not in results', (expect)=>{
         { id: 'bulbasaur', shown: 1, picked: 0 },
     ];
     shownPokemon('bubasaur');
-    const actual = localStorage.getItem('RESULTS');
+    const actual = getPokedex();
 
     expect.deepEqual(actual, expected);
 });
@@ -83,7 +83,7 @@ test('pickPokemon increments the picked key when the item exists in results', (e
 
 
     pickPokemon('bulbasaur'); 
-    const actual = localStorage.getItem('RESULTS');
+    const actual = getPokedex();
 
     expect.deepEqual(actual, expected);
 });
