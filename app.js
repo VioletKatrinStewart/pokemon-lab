@@ -48,11 +48,18 @@ let totalPlays = 0;
 generatePokemon();
 
 button.addEventListener('click', ()=>{
-    totalPlays++;
     const chosenRadio = document.querySelector('input[type=radio]:checked');
-    const chosenId = chosenRadio.value;
-    pickPokemon(chosenId);
-
     generatePokemon();
+    if (chosenRadio){
+        const chosenID = chosenRadio.value;
+        totalPlays++;
+        pickPokemon(chosenID);
+        if (totalPlays >= 10){
+            window.location = './results';
+        } else {
+            generatePokemon();
+        }
+
+    }
 });
 
