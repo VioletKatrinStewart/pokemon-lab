@@ -31,7 +31,7 @@ export function pickPokemon(id){
 
     item.picked++;
 
-    localStorage.setItem('RESULTS', results);
+    localStorage.setItem(JSON.stringify(results));
 }
 
 
