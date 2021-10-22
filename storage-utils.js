@@ -28,8 +28,8 @@ export function shownPokemon(id){
 export function pickPokemon(id){
     let results = getPokedex();
     let item = findById(results, id);
-    console.log(item);
-    console.log(results, typeof id);
+    //console.log(item);
+    //console.log(results, typeof id);
     item.picked++;
    
 

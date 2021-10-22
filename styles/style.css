@@ -10,3 +10,51 @@ input[type=radio]:checked + img{
     padding: 50px;
     
 } 
+
+body {
+    background-image: url(../assets/450px-PRS&E_Route_101.png);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+
+}
+
+h2 {
+    width: 250px;
+    background-color: greenyellow;
+
+}
+
+img {
+    width: 400px;
+}
+
+button {
+    font-size: 40px;
+    background-color: greenyellow;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    
+} 
+
+#results {
+    background-color: greenyellow;
+    
+}
+
+* {
+    font-family: 'Press Start 2P', cursive;
+}
