@@ -1,0 +1,25 @@
+* {
+    font-family: 'Press Start 2P', cursive;
+    
+    
+}
+
+header {
+    background-color: greenyellow;
+    width: 45px;
+    
+}
+
+h1 {
+    background-color: greenyellow;
+    
+}
+
+main {
+    background-image: url(../assets/pokebackground.jpg);
+}
+
+img {
+    width: 300px;
+    padding: 20px;
+}

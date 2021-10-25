@@ -3,7 +3,58 @@ input[type=radio] {
 }
 
 input[type=radio]:checked + img{
-    border: 5px solid pink;
+    background-image: url(../assets/download.png);
+    background-size: 125%;
+    background-position: center;
     border-radius: 50%;
-    background-color: hotpink;
+    padding: 50px;
+    
 } 
+
+body {
+    background-image: url(../assets/450px-PRS&E_Route_101.png);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+
+}
+
+h2 {
+    width: 250px;
+    background-color:rgb(220, 241, 122);
+
+}
+
+img {
+    width: 400px;
+}
+
+button {
+    font-size: 40px;
+    background-color: rgb(220, 241, 122);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    
+} 
+
+#results {
+    background-color: rgb(220, 241, 122);
+    
+}
+
+* {
+    font-family: 'Press Start 2P', cursive;
+}
